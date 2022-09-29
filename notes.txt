@@ -1,0 +1,81 @@
+< VIDEO 5 >
+
+<VIDEO 6>
+
+    PROPS (short for properties)
+
+    named export 
+        inko bracket mai import krna pdega, aur jo defination uski uss js mai hai voh hie use krna import mai dusra nai.
+
+    default export
+        be default export kya kar raha hai javascript yeh define krte hai hum
+
+
+    PROPS --> components ki properties that are used from imports
+
+            EXampple:
+            <Navbar title="TextUtils" />
+            here title is a props
+
+
+            proptypes define kar skte hai, jiss se prop ke objects ka ekk hie type rahe (har ekk ka alag hoskta hai).(ismai isrequired dal doge toh uss prop object ka input necessary hojayegaa);
+
+            prop ke default value bhi define kar skte ho
+
+            EXampple:
+            Navbar.prototypes = {
+                title : PropTypes.string,
+                aboutText : PropTypes.string,
+            };
+
+            Navbar.defaultProps = {
+                title:"Set title here",
+                aboutText:"About",
+            }
+
+
+<VIDEO 7>
+
+    STATE: mtlb uski uss time state kya hai.
+    PROPS AND STATE are different
+
+
+    State ko as a hook import kare
+    import React, {useState} from 'react'
+
+    HOoks bina class bnaye uss ke functuion use krne dete hai
+    usestate helps to update particular entity
+    kyunki react mai simply update ni krskte
+
+
+    onchange function tbh run hota h jbh hum usmai kuch chanfe krte hai.
+
+            Example: 
+
+            const[text,setText] = useState("Enter Text here");
+
+            const handleUpClick = ()=>{
+                let newtext = text.toUpperCase();
+                setText(newtext);
+            }
+
+            const handleonchange = (event)=>{
+                setText(event.target.value);
+            }
+            return (
+                <>
+                
+                <div className="mb-3">
+                    <h1>{props.heading}</h1>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" value={text} onChange={handleonchange} rows="8"></textarea>
+                    <button className="btn btn-primary my-3" onClick={handleUpClick}>Convert to Uppercase</button>
+                </div>
+                </>
+            )
+
+<VIDEO 16>
+REACT ROUTER
+
+Instead ki hum components ko bar bar laye server se, ekk particular component ko change krdege
+
+
