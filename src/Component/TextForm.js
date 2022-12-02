@@ -76,7 +76,7 @@ export default function TextForm(props) {
       >
         <h2>Your Text Summary</h2>
         <p>
-          {countWords(text)} words and {text.replace(" ", "").length} characters
+          {countWords(text)} words and {text.replace(" ","").length} characters
         </p>
         <p>Time required to read -- {0.008 * text.split(' ').filter((a) => {return a.length!==0}).length} </p>
       </div>
